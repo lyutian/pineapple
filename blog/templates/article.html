@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="articles">
+	<section class="article">
+		<header class="article-header">
+			<h2 class="article-title">
+				{{ article.title }}
+			</h2>
+			<p class="article-meta">
+				Time: <a class="article-time" href="#">{{ article.date_time }}</a>
+				<a class="article-category" href="#">{{ article.category }}</a>
+			</p>
+		</header>
+
+		<div class="article-content">
+			<p>
+				{{ article.content | safe}}
+			</p>
+		</div>
+	</section>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="page-header">
+    TBABM   
+    <small>Curiosity is the best teacher</small>
+</h1>
+
+<div class="articles">
+	{% for blog in blog_list %}
+	<section class="article">
+		<header class="article-header">
+			<h2 class="article-title">
+				<a href="{% url "detail" id=blog.id %}" >
+					{{ blog.title }}
+				</a>
+			</h2>
+			<p class="article-meta">
+				Time:  <a class="article-time" href="#">{{ blog.date_time }}</a>
+				<a class="article-category" href="#">{{ blog.category }}</a>
+			</p>
+		</header>
+		<div class="article-content">
+			<p>
+				{{ blog.abstract }}
+			</p>
+			<a class="btn btn-primary" href="{% url "detail" id=blog.id %}">
+				Read More
+				<span class="glyphicon glyphicon-chevron-right">
+				</span>
+			</a>
+		</div>
+	</section>
+	{% endfor %}
+</div>
+{% endblock %}
