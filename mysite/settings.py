@@ -135,6 +135,7 @@ CKEDITOR_CONFIGS = {
             {'name': 'forms',
              'items': ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
                        'HiddenField']},                
+            {'name': 'about', 'items': ['About']},
             '/',
             {'name': 'basicstyles',         
              'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
@@ -144,11 +145,11 @@ CKEDITOR_CONFIGS = {
                        'Language']},                   
             {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
             {'name': 'insert',
-             'items': ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe', 'Mathjax']},
+             'items': ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe', 
+                 'Mathjax', 'CodeSnippet']},
             {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']}, 
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
             {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
-            {'name': 'about', 'items': ['About']},
             # '/',  # put this to force next toolbar on new line
             # {'name': 'yourcustomtools', 'items': [
             #    # put the name of your editor.ui.addButton here
@@ -168,12 +169,20 @@ CKEDITOR_CONFIGS = {
         # Attention here: the old cdn of mathjax is retired. need another cdn or local one.
         # 'mathJaxLib': '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML',
         'mathJaxLib': '/static/MathJax-2.7.1/MathJax.js?config=TeX-AMS_HTML',
+        # configue code snippet plugin.
+        'codeSnippet_theme': 'monokai',
+        'codeSnippet_languages': {
+            'python': 'Python',
+            'bash': 'Bash',
+            'cpp': 'C++',
+            },
         'tabSpaces': 4,
         'extraPlugins': ','.join([
             'uploadimage', # the upload image feature
             # your extra plugins here
             'div',
             'mathjax',
+            'codesnippet',
             'autolink',
             'autoembed',
             'embedsemantic',
