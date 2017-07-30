@@ -164,7 +164,10 @@ CKEDITOR_CONFIGS = {
         # 'filebrowserWindowHeight': 725,
         # 'filebrowserWindowWidth': 940,
         # 'toolbarCanCollapse': True,
-        'mathJaxLib': 'http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+
+        # Attention here: the old cdn of mathjax is retired. need another cdn or local one.
+        # 'mathJaxLib': '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML',
+        'mathJaxLib': '/static/MathJax-2.7.1/MathJax.js?config=TeX-AMS_HTML',
         'tabSpaces': 4,
         'extraPlugins': ','.join([
             'uploadimage', # the upload image feature
